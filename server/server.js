@@ -1,19 +1,29 @@
 const express = require("express");
-const bodyparser = require("body-parser");
-const cookieParser = require("cookie-parser");
+const cors = require("cors");
+const dbClient = require("./db/dbConnection.js");
+const userRoute = require("./routes/user.routes.js");
+
+dbClient.connect((err) => {
+  //Connected Database
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("DB Connected!");
+  }
+});
 
 const app = express();
-// app use
-app.use(bodyparser.urlencoded({ extended: false }));
-app.use(bodyparser.json());
-app.use(cookieParser());
+var corsOptions = {
+  origin: "*",
+};
+app.use(cors(corsOptions));
+app.use(express.json());
 
-const userRoute = require("./routes/user.routes");
-
-app.use("/user", userRoute);
+// Routes
+app.use("/api/user", userRoute);
 
 // listening port
-const PORT = process.env.PORT || 3000;
+const PORT = 3001;
 app.listen(PORT, () => {
-  console.log(`app is live at ${PORT}`);
+  console.log(`Server up and running on port = ${PORT}`);
 });

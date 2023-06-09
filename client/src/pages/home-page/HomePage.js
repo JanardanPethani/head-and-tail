@@ -11,6 +11,15 @@ function HomePage() {
       <Link className="ht-link" to={"/about"}>
         About
       </Link>
+      <Link
+        className="ht-link"
+        to={"/"}
+        onClick={() => {
+          localStorage.removeItem("access-token");
+        }}
+      >
+        Logout
+      </Link>
     </div>
   );
 }

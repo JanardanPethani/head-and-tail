@@ -17,8 +17,8 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/head-and-tail" element={<HeadAndTailPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="*" element={<NotFoundPage />} />
       </Route>
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
