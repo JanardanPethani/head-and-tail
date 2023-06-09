@@ -17,7 +17,6 @@ export async function login(email, password) {
       },
       config
     );
-    console.log("login", res);
     localStorage.setItem("access-token", res.token);
     return res;
   } catch (errors) {
@@ -40,7 +39,6 @@ export async function signUp(email, password) {
       },
       config
     );
-    console.log("Signup", res);
     localStorage.setItem("access-token", res.token);
     return res;
   } catch (errors) {
