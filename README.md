@@ -1,8 +1,8 @@
 ## Technologies used
 
-- ReactJS
-- NodeJS
-- Postgres
+- Front-end: ReactJS
+- Back-end: NodeJS, Express 
+- DB: Postgres
 
 ## To run server
 
