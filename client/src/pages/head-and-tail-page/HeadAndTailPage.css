@@ -1,0 +1,16 @@
+.ht-form {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.ht-select {
+  padding: 10px;
+}
+
+.ht-form-op {
+  font-size: large;
+  display: flex;
+  column-gap: 10px;
+  margin: 10px 20px;
+}
